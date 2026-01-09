@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Map, Users, Banknote, Shield, FileCheck2, Building2 } from "lucide-react";
+import { Map, Users, Banknote, Shield, FileCheck2, Building2, Sparkles } from "lucide-react";
 import { Section } from "./Section";
 import { Card } from "./Card";
+import { CTASection } from "./CTASection";
 
 const modules = [
   {
@@ -44,37 +45,44 @@ const modules = [
 
 export const ModulesPage = () => {
   return (
-    <Section
-      id="modules"
-      eyebrow="Modules"
-      title="A complete workspace for trade operations"
-      subtitle="Six integrated modules that cover the full lifecycle of a deal."
-    >
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-        {modules.map((m, i) => (
-          <Card key={m.name} icon={m.icon} title={m.name} desc={m.oneLiner} bullets={m.bullets} index={i} />
-        ))}
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8 max-w-2xl mx-auto text-center"
+    <>
+      <Section
+        id="modules"
+        eyebrow="Modules"
+        title="A complete workspace for trade operations"
+        subtitle="Six integrated modules that cover the full lifecycle of a deal."
       >
-        <h3 className="text-lg font-semibold text-foreground mb-3">AI-first interface (across every module)</h3>
-        <p className="text-sm text-muted-foreground mb-4">
-          The chat layer helps users move faster: capture messy inputs, explain decisions, and guide next steps.
-          It's not a separate product area — it's how the whole app feels.
-        </p>
-        <div className="flex flex-wrap justify-center gap-2">
-          {["Chat + forms", "Explainability", "Safe fallbacks"].map((tag) => (
-            <span key={tag} className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70">
-              {tag}
-            </span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {modules.map((m, i) => (
+            <Card key={m.name} icon={m.icon} title={m.name} desc={m.oneLiner} bullets={m.bullets} index={i} />
           ))}
         </div>
-      </motion.div>
-    </Section>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="rounded-2xl border border-white/10 bg-gradient-to-br from-primary/5 to-transparent p-8 max-w-3xl mx-auto text-center"
+        >
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-4">
+            <Sparkles className="w-7 h-7 text-primary" />
+          </div>
+          <h3 className="text-xl font-semibold text-foreground mb-3">AI-first interface (across every module)</h3>
+          <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
+            The chat layer helps users move faster: capture messy inputs, explain decisions, and guide next steps.
+            It's not a separate product area — it's how the whole app feels.
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {["Chat + forms", "Explainability", "Safe fallbacks", "Context-aware"].map((tag) => (
+              <span key={tag} className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs text-primary">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+      </Section>
+
+      <CTASection />
+    </>
   );
 };

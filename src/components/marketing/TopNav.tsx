@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Menu, X, Network } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { BRAND } from "@/lib/constants";
+import { TraiboxLogo } from "./TraiboxLogo";
 
 type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company";
 
@@ -30,34 +31,41 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handlePageChange = (key: PageKey) => {
+    setPage(key);
+    setIsMobileOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/90 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+        isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button onClick={() => setPage("home")} className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <Network className="h-5 w-5" />
-            </div>
+          <button 
+            onClick={() => handlePageChange("home")} 
+            className="flex items-center gap-3 group"
+          >
+            <TraiboxLogo className="h-9 w-9 text-primary" />
             <div className="hidden sm:block">
-              <p className="text-sm font-semibold text-foreground">{BRAND.name}</p>
+              <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{BRAND.name}</p>
               <p className="text-[10px] text-muted-foreground tracking-wide">Trade Intelligence Networks</p>
             </div>
           </button>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 bg-white/5 rounded-full p-1">
             {links.map((l) => (
               <button
                 key={l.key}
-                onClick={() => setPage(l.key)}
-                className={`px-3 py-2 text-xs rounded-full transition ${
+                onClick={() => handlePageChange(l.key)}
+                className={`px-4 py-2 text-xs rounded-full transition-all duration-200 ${
                   page === l.key
-                    ? "bg-white text-black"
+                    ? "bg-white text-black font-medium"
                     : "text-white/70 hover:text-white hover:bg-white/10"
                 }`}
               >
@@ -72,13 +80,13 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
               href={BRAND.appUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-xs font-medium text-white/80 hover:text-white transition"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-white/80 hover:text-white transition"
             >
               Launch app <ArrowRight className="h-3 w-3" />
             </a>
             <Link
               to="/request-access"
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-xs font-medium text-black hover:bg-white/90 transition"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-xs font-medium text-black hover:bg-white/90 transition shadow-lg shadow-white/5"
             >
               Request access <ArrowRight className="h-3 w-3" />
             </Link>
@@ -86,7 +94,7 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-foreground p-2"
+            className="lg:hidden text-foreground p-2 hover:bg-white/10 rounded-lg transition"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
           >
             {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -100,10 +108,7 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
               {links.map((l) => (
                 <button
                   key={l.key}
-                  onClick={() => {
-                    setPage(l.key);
-                    setIsMobileOpen(false);
-                  }}
+                  onClick={() => handlePageChange(l.key)}
                   className={`px-3 py-2 text-xs rounded-full border transition ${
                     page === l.key
                       ? "border-white/30 bg-white text-black"
@@ -125,6 +130,7 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
               </a>
               <Link
                 to="/request-access"
+                onClick={() => setIsMobileOpen(false)}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
               >
                 Request access <ArrowRight className="h-4 w-4" />
