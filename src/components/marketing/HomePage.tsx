@@ -14,6 +14,7 @@ import { TrustedBy } from "./TrustedBy";
 import { FeatureShowcase } from "./FeatureShowcase";
 import { ComparisonTable } from "./ComparisonTable";
 import { InteractiveDemo } from "./InteractiveDemo";
+import { Newsletter } from "./Newsletter";
 import { BRAND } from "@/lib/constants";
 
 const pillars = [
@@ -82,6 +83,9 @@ export const HomePage = () => {
 
       <Divider />
       <FAQ />
+      <Divider />
+
+      <Newsletter />
       <Divider />
 
       <CTASection />
