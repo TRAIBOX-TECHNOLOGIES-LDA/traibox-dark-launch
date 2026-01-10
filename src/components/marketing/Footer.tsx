@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { Divider } from "./Divider";
-import { TraiboxLogo } from "./TraiboxLogo";
 
 type PageKey = "home" | "platform" | "solutions" | "pricing" | "trust" | "company" | "resources" | "blog";
 
@@ -26,7 +25,7 @@ export const Footer = ({ setPage }: FooterProps) => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
-              <TraiboxLogo className="h-32" />
+              <img src="/web-app-manifest-512x512.png" alt="Traibox Logo" className="h-32" />
             </div>
             <p className="text-xs text-muted-foreground mb-4">
               {BRAND.tagline}
