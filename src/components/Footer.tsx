@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { TraiboxLogo } from "@/components/marketing/TraiboxLogo";
 import { BRAND } from "@/lib/constants";
 
 const footerLinks = {
@@ -17,7 +16,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <TraiboxLogo className="h-24" />
+              <img src="/apple-touch-icon.png.png" alt="Traibox Logo" className="h-24" />
             </Link>
             <p className="text-sm text-muted-foreground">
               {BRAND.tagline}
