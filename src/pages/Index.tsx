@@ -10,7 +10,6 @@ import { CompanyPage } from "@/components/marketing/CompanyPage";
 import { PricingPage } from "@/components/marketing/PricingPage";
 import { BlogPage } from "@/components/marketing/BlogPage";
 import { Footer } from "@/components/marketing/Footer";
-import { AnnouncementBar } from "@/components/marketing/AnnouncementBar";
 import { PageTransition } from "@/components/marketing/PageTransition";
 import { CookieConsent } from "@/components/marketing/CookieConsent";
 import { BackToTop } from "@/components/marketing/BackToTop";
@@ -48,19 +47,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <ScrollProgress />
-      <AnnouncementBar />
       <TopNav page={page} setPage={setPage} />
       
       <main>
         <PageTransition pageKey={page}>
           {content}
-
-          {/* Trust anchor for navigation from other pages */}
-          {page !== "trust" && (
-            <div id="trust" className="scroll-mt-24">
-              <TrustPage />
-            </div>
-          )}
         </PageTransition>
       </main>
 
