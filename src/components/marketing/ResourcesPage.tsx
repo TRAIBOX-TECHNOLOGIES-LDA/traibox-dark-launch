@@ -5,6 +5,7 @@ import { BRAND } from "@/lib/constants";
 import { CTASection } from "./CTASection";
 import { Newsletter } from "./Newsletter";
 import { Divider } from "./Divider";
+import { IntegrationsSection } from "./IntegrationsSection";
 
 const resources = [
   {
@@ -103,7 +104,7 @@ export const ResourcesPage = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8 max-w-2xl mx-auto text-center"
+          className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8 max-w-2xl mx-auto text-center mb-16"
         >
           <h3 className="text-lg font-semibold text-foreground mb-3">Partner integrations</h3>
           <p className="text-sm text-muted-foreground mb-4">
@@ -118,6 +119,8 @@ export const ResourcesPage = () => {
             ))}
           </div>
         </motion.div>
+
+        <IntegrationsSection />
       </Section>
 
       <Divider />
