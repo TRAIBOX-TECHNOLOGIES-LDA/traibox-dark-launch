@@ -8,11 +8,15 @@ import { TrustPage } from "@/components/marketing/TrustPage";
 import { ResourcesPage } from "@/components/marketing/ResourcesPage";
 import { CompanyPage } from "@/components/marketing/CompanyPage";
 import { PricingPage } from "@/components/marketing/PricingPage";
+import { BlogPage } from "@/components/marketing/BlogPage";
 import { Footer } from "@/components/marketing/Footer";
 import { AnnouncementBar } from "@/components/marketing/AnnouncementBar";
 import { PageTransition } from "@/components/marketing/PageTransition";
+import { CookieConsent } from "@/components/marketing/CookieConsent";
+import { BackToTop } from "@/components/marketing/BackToTop";
+import { ScrollProgress } from "@/components/marketing/ScrollProgress";
 
-type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company" | "pricing";
+type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company" | "pricing" | "blog";
 
 const Index = () => {
   const [page, setPage] = useState<PageKey>("home");
@@ -33,6 +37,8 @@ const Index = () => {
         return <CompanyPage />;
       case "pricing":
         return <PricingPage />;
+      case "blog":
+        return <BlogPage />;
       case "home":
       default:
         return <HomePage />;
@@ -41,6 +47,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <ScrollProgress />
       <AnnouncementBar />
       <TopNav page={page} setPage={setPage} />
       
@@ -58,6 +65,8 @@ const Index = () => {
       </main>
 
       <Footer />
+      <BackToTop />
+      <CookieConsent />
     </div>
   );
 };
