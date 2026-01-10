@@ -15,6 +15,8 @@ import { FeatureShowcase } from "./FeatureShowcase";
 import { ComparisonTable } from "./ComparisonTable";
 import { InteractiveDemo } from "./InteractiveDemo";
 import { Newsletter } from "./Newsletter";
+import { ArchitectureSection } from "./ArchitectureSection";
+import { IntegrationsSection } from "./IntegrationsSection";
 import { BRAND } from "@/lib/constants";
 
 const pillars = [
@@ -55,6 +57,10 @@ export const HomePage = () => {
       <Stats />
       <Divider />
 
+      {/* Architecture - The Operating Layer */}
+      <ArchitectureSection />
+      <Divider />
+
       <Section id="pillars" title="One operating layer for modern trade">
         <div className="grid md:grid-cols-2 gap-6">
           {pillars.map((p, i) => (
@@ -67,14 +73,18 @@ export const HomePage = () => {
       <FeatureShowcase />
       <Divider />
 
+      <HowItWorks />
+      
+      <Divider />
+
+      {/* Integrations */}
+      <IntegrationsSection />
+      <Divider />
+
       <Section id="demo" title="Experience the platform">
         <InteractiveDemo />
       </Section>
 
-      <Divider />
-
-      <HowItWorks />
-      
       <Divider />
       <ComparisonTable />
       <Divider />

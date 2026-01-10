@@ -47,7 +47,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-4"
             >
               {BRAND.tagline}
             </motion.h1>
@@ -56,11 +56,21 @@ export const Hero = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-lg text-muted-foreground mb-8"
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="text-xl md:text-2xl text-primary font-medium mb-4"
             >
-              {BRAND.name} is the operating layer for modern trade: one place to run a deal end-to-end — from
-              intent to partners, compliance, funding, payments, and verifiable proof.
+              {BRAND.subtitle}
+            </motion.p>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-base text-muted-foreground mb-8"
+            >
+              An AI-orchestrated operating layer that connects parties, standardizes data, 
+              automates compliance, and orchestrates transactions from discovery to settlement.
             </motion.p>
 
             {/* CTAs */}
