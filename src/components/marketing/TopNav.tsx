@@ -50,13 +50,9 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
           {/* Logo */}
           <button 
             onClick={() => handlePageChange("home")} 
-            className="flex items-center gap-3 group"
+            className="flex items-center group"
           >
-            <TraiboxLogo className="h-9 w-9 text-primary" />
-            <div className="hidden sm:block">
-              <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{BRAND.name}</p>
-              <p className="text-[10px] text-muted-foreground tracking-wide">Trade Intelligence Networks</p>
-            </div>
+            <TraiboxLogo className="h-8 w-8" showText textClassName="text-lg font-semibold tracking-tight" />
           </button>
 
           {/* Desktop nav */}

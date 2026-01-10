@@ -35,12 +35,11 @@ export const Footer = () => (
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
         {/* Brand */}
         <div className="col-span-2 md:col-span-1">
-          <div className="flex items-center gap-2 mb-4">
-            <TraiboxLogo className="h-8 w-8 text-primary" />
-            <span className="text-sm font-semibold text-foreground">{BRAND.name}</span>
+          <div className="mb-4">
+            <TraiboxLogo className="h-7 w-7" showText textClassName="text-base font-semibold tracking-tight" />
           </div>
           <p className="text-xs text-muted-foreground mb-4">
-            The operating layer for modern trade.
+            {BRAND.tagline}
           </p>
           <Link
             to="/request-access"
