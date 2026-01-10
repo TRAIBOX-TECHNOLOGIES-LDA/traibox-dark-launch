@@ -1,45 +1,60 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MessageSquare, Users, Shield, Banknote, FileCheck2, Zap } from "lucide-react";
+import { ArrowRight, Plug, Network, ShieldCheck, FileText, Truck, Wallet, Zap } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 interface Step {
   icon: LucideIcon;
   title: string;
+  action: string;
   description: string;
 }
 
 const steps: Step[] = [
   {
-    icon: MessageSquare,
-    title: "Capture",
-    description: "Start with chat or documents. TRAIBOX structures the deal automatically.",
+    icon: Plug,
+    title: "Plug in",
+    action: "Connect",
+    description: "Companies connect their systems — catalogs, requirements, onboarding rules — directly or via our web app.",
   },
   {
-    icon: Users,
-    title: "Match",
-    description: "Network intelligence surfaces the right partners with transparent signals.",
+    icon: Network,
+    title: "Network",
+    action: "Discover",
+    description: "Build your trading network. Import from ERP, invite partners, or let AI matchmaking discover qualified opportunities.",
   },
   {
-    icon: Shield,
-    title: "Comply",
-    description: "KYC/AML, sanctions, and export controls with explainable outcomes.",
+    icon: ShieldCheck,
+    title: "Verify",
+    action: "Qualify",
+    description: "Automated onboarding with KYC/AML, sanctions, export controls, and custom compliance checks.",
   },
   {
-    icon: Banknote,
-    title: "Finance",
-    description: "Compare funding options and execute payments in one workflow.",
+    icon: FileText,
+    title: "Transact",
+    action: "Structure",
+    description: "Generate a clean 'trade packet' — terms, order details, documents, and milestones in one place.",
   },
   {
-    icon: FileCheck2,
-    title: "Prove",
-    description: "Generate audit packs with deterministic, verifiable proofs.",
+    icon: Truck,
+    title: "Execute",
+    action: "Orchestrate",
+    description: "Coordinate logistics, customs, and compliance tasks across all parties and tools automatically.",
+  },
+  {
+    icon: Wallet,
+    title: "Settle",
+    action: "Complete",
+    description: "Coordinate payment milestones, track changes, and maintain ongoing compliance monitoring.",
   },
 ];
 
 export const HowItWorks = () => {
   return (
     <section className="py-24 md:py-32 relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent pointer-events-none" />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,19 +66,19 @@ export const HowItWorks = () => {
             How it works
           </div>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-            From intent to proof in one flow
+            From discovery to settlement
           </h2>
           <p className="text-muted-foreground">
-            Every deal follows the same structured path — capture, match, comply, finance, prove.
+            One orchestrated flow that handles the complexity of global trade — so you can focus on growing your business.
           </p>
         </motion.div>
 
-        {/* Desktop flow */}
-        <div className="hidden lg:block relative">
+        {/* Desktop flow - 6 steps */}
+        <div className="hidden lg:block relative mb-16">
           {/* Connection line */}
-          <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-y-1/2" />
+          <div className="absolute top-8 left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20" />
           
-          <div className="grid grid-cols-5 gap-4">
+          <div className="grid grid-cols-6 gap-3">
             {steps.map((step, i) => (
               <motion.div
                 key={step.title}
@@ -76,18 +91,19 @@ export const HowItWorks = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative z-10 mb-4">
                     <motion.div
-                      className="w-16 h-16 rounded-2xl bg-background border border-white/10 flex items-center justify-center"
+                      className="w-16 h-16 rounded-2xl bg-background border border-white/10 flex items-center justify-center shadow-lg shadow-primary/5"
                       whileHover={{ scale: 1.05, borderColor: "hsl(var(--primary))" }}
                       transition={{ duration: 0.2 }}
                     >
                       <step.icon className="w-7 h-7 text-primary" />
                     </motion.div>
-                    {i < steps.length - 1 && (
-                      <ArrowRight className="absolute -right-8 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                    )}
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-medium px-2 py-0.5 rounded-full">
+                      {i + 1}
+                    </div>
                   </div>
+                  <span className="text-[10px] text-primary uppercase tracking-wider mb-1">{step.action}</span>
                   <h3 className="text-sm font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -95,29 +111,52 @@ export const HowItWorks = () => {
         </div>
 
         {/* Mobile flow */}
-        <div className="lg:hidden space-y-4">
+        <div className="lg:hidden space-y-3">
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/[0.02]"
+              transition={{ delay: i * 0.08 }}
+              className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <step.icon className="w-6 h-6 text-primary" />
+              <div className="flex-shrink-0 relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <step.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div className="absolute -bottom-1 -right-1 bg-primary text-primary-foreground text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                  {i + 1}
+                </div>
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs text-primary font-medium">Step {i + 1}</span>
+                  <span className="text-[10px] text-primary uppercase tracking-wider">{step.action}</span>
                 </div>
                 <h3 className="text-sm font-semibold text-foreground mb-1">{step.title}</h3>
                 <p className="text-xs text-muted-foreground">{step.description}</p>
               </div>
+              {i < steps.length - 1 && (
+                <ArrowRight className="w-4 h-4 text-white/20 flex-shrink-0 mt-4" />
+              )}
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom highlight */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 max-w-2xl mx-auto text-center"
+        >
+          <div className="inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 px-6 py-3">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <p className="text-sm text-muted-foreground">
+              <span className="text-foreground font-medium">Not an all-in-one suite.</span> A modular operating layer that works with your existing tools.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
