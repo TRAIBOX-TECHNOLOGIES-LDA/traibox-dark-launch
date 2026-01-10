@@ -30,7 +30,7 @@ const trustBlocks = [
 
 export const TrustPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="trust"
         eyebrow="Trust"
@@ -105,6 +105,6 @@ export const TrustPage = () => {
       <Newsletter />
       <Divider />
       <CTASection />
-    </>
+    </div>
   );
 };

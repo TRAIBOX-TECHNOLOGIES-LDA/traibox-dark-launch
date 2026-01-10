@@ -45,7 +45,7 @@ const modules = [
 
 export const ModulesPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="modules"
         eyebrow="Modules"
@@ -83,6 +83,6 @@ export const ModulesPage = () => {
       </Section>
 
       <CTASection />
-    </>
+    </div>
   );
 };

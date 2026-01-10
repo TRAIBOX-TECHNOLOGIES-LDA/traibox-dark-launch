@@ -71,7 +71,7 @@ const categories = ["All", "Product News", "Industry Insights", "Compliance", "C
 
 export const BlogPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="blog"
         eyebrow="Blog"
@@ -193,6 +193,6 @@ export const BlogPage = () => {
       <Newsletter />
       <Divider />
       <CTASection />
-    </>
+    </div>
   );
 };

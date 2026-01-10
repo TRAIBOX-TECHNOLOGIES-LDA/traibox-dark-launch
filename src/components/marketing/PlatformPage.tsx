@@ -34,7 +34,7 @@ const blocks = [
 
 export const PlatformPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="platform"
         eyebrow="Platform"
@@ -103,6 +103,6 @@ export const PlatformPage = () => {
       </Section>
 
       <CTASection />
-    </>
+    </div>
   );
 };

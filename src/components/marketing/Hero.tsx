@@ -15,7 +15,7 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen pt-24 md:pt-32 pb-16 overflow-hidden">
+    <section className="relative min-h-screen pt-32 md:pt-40 pb-16 overflow-hidden">
       <AnimatedBackground />
 
       <div className="container mx-auto px-6 relative z-10">

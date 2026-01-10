@@ -12,7 +12,7 @@ import { Careers } from "./Careers";
 
 export const CompanyPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="company"
         eyebrow="Company"
@@ -165,6 +165,6 @@ export const CompanyPage = () => {
       <Newsletter />
       <Divider />
       <CTASection />
-    </>
+    </div>
   );
 };

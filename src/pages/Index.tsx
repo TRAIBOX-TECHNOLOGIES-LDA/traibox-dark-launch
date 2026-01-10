@@ -51,7 +51,7 @@ const Index = () => {
       <AnnouncementBar />
       <TopNav page={page} setPage={setPage} />
       
-      <main className="pt-16 md:pt-20">
+      <main>
         <PageTransition pageKey={page}>
           {content}
 
