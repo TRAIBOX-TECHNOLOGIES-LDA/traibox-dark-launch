@@ -35,7 +35,7 @@ const solutions = [
 
 export const SolutionsPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="solutions"
         eyebrow="Solutions"
@@ -75,6 +75,6 @@ export const SolutionsPage = () => {
 
       <Divider />
       <CTASection />
-    </>
+    </div>
   );
 };

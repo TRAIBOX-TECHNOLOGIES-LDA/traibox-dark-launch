@@ -43,7 +43,7 @@ const guides = [
 
 export const ResourcesPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="resources"
         eyebrow="Resources"
@@ -127,6 +127,6 @@ export const ResourcesPage = () => {
       <Newsletter />
       <Divider />
       <CTASection />
-    </>
+    </div>
   );
 };

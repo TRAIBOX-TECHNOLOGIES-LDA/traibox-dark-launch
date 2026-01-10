@@ -90,7 +90,7 @@ const comparisonFeatures = [
 
 export const PricingPage = () => {
   return (
-    <>
+    <div className="pt-24 md:pt-32">
       <Section
         id="pricing"
         eyebrow="Pricing"
@@ -210,6 +210,6 @@ export const PricingPage = () => {
       <FAQ />
       <Divider />
       <CTASection />
-    </>
+    </div>
   );
 };
