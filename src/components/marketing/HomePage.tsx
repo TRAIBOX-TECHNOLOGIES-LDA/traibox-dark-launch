@@ -10,6 +10,9 @@ import { Testimonials } from "./Testimonials";
 import { Stats } from "./Stats";
 import { FAQ } from "./FAQ";
 import { CTASection } from "./CTASection";
+import { TrustedBy } from "./TrustedBy";
+import { FeatureShowcase } from "./FeatureShowcase";
+import { ComparisonTable } from "./ComparisonTable";
 import { BRAND } from "@/lib/constants";
 
 const pillars = [
@@ -44,6 +47,8 @@ export const HomePage = () => {
     <>
       <Hero />
       
+      <TrustedBy />
+
       <Divider />
       <Stats />
       <Divider />
@@ -57,7 +62,13 @@ export const HomePage = () => {
       </Section>
 
       <Divider />
+      <FeatureShowcase />
+      <Divider />
+
       <HowItWorks />
+      
+      <Divider />
+      <ComparisonTable />
       <Divider />
 
       <Testimonials />
