@@ -33,10 +33,7 @@ const NotFound = () => {
         >
           {/* Logo */}
           <Link to="/" className="inline-flex items-center gap-3 mb-8 group">
-            <TraiboxLogo className="h-10 w-10 text-primary" />
-            <span className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-              TRAIBOX
-            </span>
+            <TraiboxLogo className="h-24" />
           </Link>
 
           {/* 404 */}

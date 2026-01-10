@@ -56,7 +56,7 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
             onClick={() => handlePageChange("home")} 
             className="flex items-center group"
           >
-            <TraiboxLogo className="h-8 w-8" showText textClassName="text-lg font-semibold tracking-tight" />
+            <TraiboxLogo className="h-24" />
           </button>
 
           {/* Desktop nav */}
