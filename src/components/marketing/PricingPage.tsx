@@ -11,8 +11,8 @@ const plans = [
     name: "Starter",
     icon: Zap,
     description: "For small teams exploring trade automation",
-    price: "€499",
-    period: "/month",
+    price: "Free",
+    period: "",
     highlight: false,
     features: [
       "Up to 50 deals/month",
@@ -22,47 +22,28 @@ const plans = [
       "API access",
       "Standard exports",
     ],
-    cta: "Start free trial",
+    cta: "Get started",
     ctaLink: "/request-access",
   },
   {
-    name: "Growth",
-    icon: Rocket,
-    description: "For growing businesses scaling trade operations",
-    price: "€1,499",
-    period: "/month",
+    name: "Challenger",
+    icon: Building2,
+    description: "For growing organizations with advanced needs",
+    price: "Custom",
+    period: "",
     highlight: true,
     badge: "Most Popular",
     features: [
-      "Up to 500 deals/month",
-      "5 trade corridors",
-      "Full compliance suite",
-      "Priority support",
-      "Advanced API + webhooks",
-      "Audit-ready exports",
-      "Custom integrations",
-      "Team collaboration",
-    ],
-    cta: "Start free trial",
-    ctaLink: "/request-access",
-  },
-  {
-    name: "Enterprise",
-    icon: Building2,
-    description: "For large organizations with complex needs",
-    price: "Custom",
-    period: "",
-    highlight: false,
-    features: [
       "Unlimited deals",
       "Unlimited corridors",
-      "Custom compliance rules",
+      "Full compliance suite",
+      "Access to funding",
+      "Payment methods",
+      "Blockchain security",
       "Dedicated support + SLA",
-      "On-premise deployment",
       "SSO & RBAC",
       "Custom integrations",
       "Dedicated success manager",
-      "Custom contracts & billing",
     ],
     cta: "Contact sales",
     ctaLink: "/request-access",
@@ -70,22 +51,22 @@ const plans = [
 ];
 
 const comparisonFeatures = [
-  { name: "Deals per month", starter: "50", growth: "500", enterprise: "Unlimited" },
-  { name: "Trade corridors", starter: "1", growth: "5", enterprise: "Unlimited" },
-  { name: "Team members", starter: "3", growth: "15", enterprise: "Unlimited" },
-  { name: "KYC/AML checks", starter: "Basic", growth: "Full suite", enterprise: "Custom" },
-  { name: "Sanctions screening", starter: "✓", growth: "✓", enterprise: "✓" },
-  { name: "ESG/CBAM reporting", starter: "—", growth: "✓", enterprise: "✓" },
-  { name: "Funding marketplace", starter: "—", growth: "✓", enterprise: "✓" },
-  { name: "Payment execution", starter: "✓", growth: "✓", enterprise: "✓" },
-  { name: "Proof anchoring", starter: "—", growth: "✓", enterprise: "✓" },
-  { name: "API access", starter: "✓", growth: "✓", enterprise: "✓" },
-  { name: "Webhooks", starter: "—", growth: "✓", enterprise: "✓" },
-  { name: "Custom integrations", starter: "—", growth: "✓", enterprise: "✓" },
-  { name: "SSO/SAML", starter: "—", growth: "—", enterprise: "✓" },
-  { name: "On-premise", starter: "—", growth: "—", enterprise: "✓" },
-  { name: "SLA", starter: "—", growth: "99.9%", enterprise: "Custom" },
-  { name: "Support", starter: "Email", growth: "Priority", enterprise: "Dedicated" },
+  { name: "Deals per month", starter: "50", challenger: "Unlimited" },
+  { name: "Trade corridors", starter: "1", challenger: "Unlimited" },
+  { name: "Team members", starter: "3", challenger: "Unlimited" },
+  { name: "KYC/AML checks", starter: "Basic", challenger: "Full suite" },
+  { name: "Sanctions screening", starter: "✓", challenger: "✓" },
+  { name: "ESG/CBAM reporting", starter: "—", challenger: "✓" },
+  { name: "Access to funding", starter: "—", challenger: "✓" },
+  { name: "Payment methods", starter: "Basic", challenger: "Full suite" },
+  { name: "Blockchain security", starter: "—", challenger: "✓" },
+  { name: "Proof anchoring", starter: "—", challenger: "✓" },
+  { name: "API access", starter: "✓", challenger: "✓" },
+  { name: "Webhooks", starter: "—", challenger: "✓" },
+  { name: "Custom integrations", starter: "—", challenger: "✓" },
+  { name: "SSO/SAML", starter: "—", challenger: "✓" },
+  { name: "SLA", starter: "—", challenger: "Custom" },
+  { name: "Support", starter: "Email", challenger: "Dedicated" },
 ];
 
 export const PricingPage = () => {
@@ -98,7 +79,7 @@ export const PricingPage = () => {
         subtitle="Start with a free trial. Scale as you grow. No hidden fees."
       >
         {/* Pricing cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -187,8 +168,7 @@ export const PricingPage = () => {
                 <tr className="border-b border-white/10">
                   <th className="text-left py-4 px-6 text-sm font-medium text-foreground">Feature</th>
                   <th className="text-center py-4 px-6 text-sm font-medium text-foreground">Starter</th>
-                  <th className="text-center py-4 px-6 text-sm font-medium text-primary bg-primary/5">Growth</th>
-                  <th className="text-center py-4 px-6 text-sm font-medium text-foreground">Enterprise</th>
+                  <th className="text-center py-4 px-6 text-sm font-medium text-primary bg-primary/5">Challenger</th>
                 </tr>
               </thead>
               <tbody>
@@ -196,8 +176,7 @@ export const PricingPage = () => {
                   <tr key={feature.name} className={i % 2 === 0 ? "bg-white/[0.01]" : ""}>
                     <td className="py-3 px-6 text-sm text-muted-foreground">{feature.name}</td>
                     <td className="py-3 px-6 text-sm text-center text-muted-foreground">{feature.starter}</td>
-                    <td className="py-3 px-6 text-sm text-center text-foreground bg-primary/5">{feature.growth}</td>
-                    <td className="py-3 px-6 text-sm text-center text-muted-foreground">{feature.enterprise}</td>
+                    <td className="py-3 px-6 text-sm text-center text-foreground bg-primary/5">{feature.challenger}</td>
                   </tr>
                 ))}
               </tbody>
