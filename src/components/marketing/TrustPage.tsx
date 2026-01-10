@@ -5,6 +5,7 @@ import { Card } from "./Card";
 import { CTASection } from "./CTASection";
 import { Newsletter } from "./Newsletter";
 import { Divider } from "./Divider";
+import { SecurityBadges } from "./SecurityBadges";
 
 const trustBlocks = [
   {
@@ -95,6 +96,9 @@ export const TrustPage = () => {
             </ul>
           </motion.div>
         </div>
+
+        <Divider />
+        <SecurityBadges />
       </Section>
 
       <Divider />

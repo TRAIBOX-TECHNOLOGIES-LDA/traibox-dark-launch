@@ -7,9 +7,12 @@ import { SolutionsPage } from "@/components/marketing/SolutionsPage";
 import { TrustPage } from "@/components/marketing/TrustPage";
 import { ResourcesPage } from "@/components/marketing/ResourcesPage";
 import { CompanyPage } from "@/components/marketing/CompanyPage";
+import { PricingPage } from "@/components/marketing/PricingPage";
 import { Footer } from "@/components/marketing/Footer";
+import { AnnouncementBar } from "@/components/marketing/AnnouncementBar";
+import { PageTransition } from "@/components/marketing/PageTransition";
 
-type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company";
+type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company" | "pricing";
 
 const Index = () => {
   const [page, setPage] = useState<PageKey>("home");
@@ -28,6 +31,8 @@ const Index = () => {
         return <ResourcesPage />;
       case "company":
         return <CompanyPage />;
+      case "pricing":
+        return <PricingPage />;
       case "home":
       default:
         return <HomePage />;
@@ -36,17 +41,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <AnnouncementBar />
       <TopNav page={page} setPage={setPage} />
       
       <main className="pt-16 md:pt-20">
-        {content}
+        <PageTransition pageKey={page}>
+          {content}
 
-        {/* Trust anchor for navigation from other pages */}
-        {page !== "trust" && (
-          <div id="trust" className="scroll-mt-24">
-            <TrustPage />
-          </div>
-        )}
+          {/* Trust anchor for navigation from other pages */}
+          {page !== "trust" && (
+            <div id="trust" className="scroll-mt-24">
+              <TrustPage />
+            </div>
+          )}
+        </PageTransition>
       </main>
 
       <Footer />

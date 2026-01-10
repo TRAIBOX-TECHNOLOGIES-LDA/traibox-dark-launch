@@ -3,6 +3,8 @@ import { Briefcase, Globe, Banknote, Building2, ArrowRight, Target } from "lucid
 import { Section } from "./Section";
 import { Card } from "./Card";
 import { CTASection } from "./CTASection";
+import { Divider } from "./Divider";
+import { CaseStudies } from "./CaseStudies";
 
 const solutions = [
   {
@@ -66,8 +68,12 @@ export const SolutionsPage = () => {
             See implementation guide <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
         </motion.div>
+
+        <Divider />
+        <CaseStudies />
       </Section>
 
+      <Divider />
       <CTASection />
     </>
   );

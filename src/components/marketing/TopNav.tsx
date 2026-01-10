@@ -4,7 +4,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { TraiboxLogo } from "./TraiboxLogo";
 
-type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company";
+type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company" | "pricing";
 
 interface TopNavProps {
   page: PageKey;
@@ -16,6 +16,7 @@ const links: { key: PageKey; label: string }[] = [
   { key: "platform", label: "Platform" },
   { key: "modules", label: "Modules" },
   { key: "solutions", label: "Solutions" },
+  { key: "pricing", label: "Pricing" },
   { key: "trust", label: "Trust" },
   { key: "resources", label: "Resources" },
   { key: "company", label: "Company" },
