@@ -6,7 +6,7 @@ import { BRAND } from "@/lib/constants";
 import { CTASection } from "./CTASection";
 import { Newsletter } from "./Newsletter";
 import { Divider } from "./Divider";
-import { TeamSection } from "./TeamSection";
+
 import { Timeline } from "./Timeline";
 import { Careers } from "./Careers";
 
@@ -153,8 +153,6 @@ export const CompanyPage = () => {
           </div>
         </motion.div>
 
-        <Divider />
-        <TeamSection />
         <Divider />
         <Timeline />
         <Divider />
