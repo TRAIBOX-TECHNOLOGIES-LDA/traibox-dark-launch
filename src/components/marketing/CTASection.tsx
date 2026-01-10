@@ -27,7 +27,7 @@ export const CTASection = () => {
                 viewport={{ once: true }}
                 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4"
               >
-                Ready to transform your trade operations?
+                Start with one corridor. Scale when ready.
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -36,8 +36,7 @@ export const CTASection = () => {
                 transition={{ delay: 0.1 }}
                 className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
               >
-                Start with a pilot corridor and see the full flow in action. 
-                Our team will help you get started.
+                See the full flow in action with a pilot. Our team will help you get started.
               </motion.p>
               
               <motion.div
@@ -72,7 +71,7 @@ export const CTASection = () => {
                 transition={{ delay: 0.3 }}
                 className="mt-6 text-xs text-muted-foreground"
               >
-                No credit card required • Start with a single corridor • Scale when ready
+                No credit card • Pilot-first • Expand modules over time
               </motion.p>
             </div>
           </div>

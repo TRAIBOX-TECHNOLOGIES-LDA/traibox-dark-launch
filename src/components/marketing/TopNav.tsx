@@ -4,24 +4,28 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { TraiboxLogo } from "./TraiboxLogo";
 
-type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company" | "pricing" | "blog";
+type PageKey = "home" | "platform" | "solutions" | "pricing" | "trust" | "company" | "resources" | "blog";
 
 interface TopNavProps {
   page: PageKey;
   setPage: (page: PageKey) => void;
 }
 
-const links: { key: PageKey; label: string }[] = [
+const productLinks: { key: PageKey; label: string }[] = [
   { key: "home", label: "Overview" },
   { key: "platform", label: "Platform" },
-  { key: "modules", label: "Modules" },
   { key: "solutions", label: "Solutions" },
   { key: "pricing", label: "Pricing" },
   { key: "trust", label: "Trust" },
+];
+
+const companyLinks: { key: PageKey; label: string }[] = [
+  { key: "company", label: "Company" },
   { key: "resources", label: "Resources" },
   { key: "blog", label: "Blog" },
-  { key: "company", label: "Company" },
 ];
+
+const allLinks = [...productLinks, ...companyLinks];
 
 export const TopNav = ({ page, setPage }: TopNavProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,7 +61,7 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1 bg-white/5 rounded-full p-1">
-            {links.map((l) => (
+            {allLinks.map((l) => (
               <button
                 key={l.key}
                 onClick={() => handlePageChange(l.key)}
@@ -102,20 +106,41 @@ export const TopNav = ({ page, setPage }: TopNavProps) => {
         {/* Mobile nav */}
         {isMobileOpen && (
           <div className="lg:hidden pb-6 animate-fade-in">
-            <div className="flex flex-wrap gap-2 mb-4">
-              {links.map((l) => (
-                <button
-                  key={l.key}
-                  onClick={() => handlePageChange(l.key)}
-                  className={`px-3 py-2 text-xs rounded-full border transition ${
-                    page === l.key
-                      ? "border-white/30 bg-white text-black"
-                      : "border-white/10 bg-white/5 text-white/70"
-                  }`}
-                >
-                  {l.label}
-                </button>
-              ))}
+            <div className="mb-4">
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Product</p>
+              <div className="flex flex-wrap gap-2">
+                {productLinks.map((l) => (
+                  <button
+                    key={l.key}
+                    onClick={() => handlePageChange(l.key)}
+                    className={`px-3 py-2 text-xs rounded-full border transition ${
+                      page === l.key
+                        ? "border-white/30 bg-white text-black"
+                        : "border-white/10 bg-white/5 text-white/70"
+                    }`}
+                  >
+                    {l.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="mb-4">
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Company</p>
+              <div className="flex flex-wrap gap-2">
+                {companyLinks.map((l) => (
+                  <button
+                    key={l.key}
+                    onClick={() => handlePageChange(l.key)}
+                    className={`px-3 py-2 text-xs rounded-full border transition ${
+                      page === l.key
+                        ? "border-white/30 bg-white text-black"
+                        : "border-white/10 bg-white/5 text-white/70"
+                    }`}
+                  >
+                    {l.label}
+                  </button>
+                ))}
+              </div>
             </div>
             <div className="flex flex-col gap-2 pt-4 border-t border-white/10">
               <a
