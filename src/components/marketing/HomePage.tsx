@@ -13,6 +13,7 @@ import { CTASection } from "./CTASection";
 import { TrustedBy } from "./TrustedBy";
 import { FeatureShowcase } from "./FeatureShowcase";
 import { ComparisonTable } from "./ComparisonTable";
+import { InteractiveDemo } from "./InteractiveDemo";
 import { BRAND } from "@/lib/constants";
 
 const pillars = [
@@ -63,6 +64,12 @@ export const HomePage = () => {
 
       <Divider />
       <FeatureShowcase />
+      <Divider />
+
+      <Section id="demo" title="Experience the platform">
+        <InteractiveDemo />
+      </Section>
+
       <Divider />
 
       <HowItWorks />
