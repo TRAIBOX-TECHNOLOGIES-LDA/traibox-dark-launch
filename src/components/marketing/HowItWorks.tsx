@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Plug, Network, ShieldCheck, FileText, Truck, Wallet, Zap } from "lucide-react";
+import { ArrowRight, FileInput, ShieldCheck, Wallet, FileCheck, Zap } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 interface Step {
   icon: LucideIcon;
+  number: number;
   title: string;
   action: string;
   description: string;
@@ -11,40 +12,32 @@ interface Step {
 
 const steps: Step[] = [
   {
-    icon: Plug,
-    title: "Plug in",
-    action: "Connect",
-    description: "Companies connect their systems — catalogs, requirements, onboarding rules — directly or via our web app.",
-  },
-  {
-    icon: Network,
-    title: "Network",
-    action: "Discover",
-    description: "Build your trading network. Import from ERP, invite partners, or let AI matchmaking discover qualified opportunities.",
+    icon: FileInput,
+    number: 1,
+    title: "Capture",
+    action: "Capture",
+    description: "Drop docs, forward an email, or chat. TRAIBOX turns messy inputs into a clean trade plan.",
   },
   {
     icon: ShieldCheck,
+    number: 2,
     title: "Verify",
-    action: "Qualify",
-    description: "Automated onboarding with KYC/AML, sanctions, export controls, and custom compliance checks.",
-  },
-  {
-    icon: FileText,
-    title: "Transact",
-    action: "Structure",
-    description: "Generate a clean 'trade packet' — terms, order details, documents, and milestones in one place.",
-  },
-  {
-    icon: Truck,
-    title: "Execute",
-    action: "Orchestrate",
-    description: "Coordinate logistics, customs, and compliance tasks across all parties and tools automatically.",
+    action: "Verify",
+    description: "Run KYC/AML, sanctions, export controls, ESG/CBAM checks with clear outcomes and evidence.",
   },
   {
     icon: Wallet,
-    title: "Settle",
-    action: "Complete",
-    description: "Coordinate payment milestones, track changes, and maintain ongoing compliance monitoring.",
+    number: 3,
+    title: "Fund & Settle",
+    action: "Fund & Settle",
+    description: "Request funding, compare options, route payments, track status, and reconcile — all in one place.",
+  },
+  {
+    icon: FileCheck,
+    number: 4,
+    title: "Prove",
+    action: "Prove",
+    description: "Export an audit pack with receipts and decision reasons. Optional ledger anchoring for integrity.",
   },
 ];
 
@@ -66,19 +59,19 @@ export const HowItWorks = () => {
             How it works
           </div>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-            From discovery to settlement
+            Four steps. Full clarity.
           </h2>
           <p className="text-muted-foreground">
-            One orchestrated flow that handles the complexity of global trade — so you can focus on growing your business.
+            From first conversation to verifiable proof — one flow that handles the complexity.
           </p>
         </motion.div>
 
-        {/* Desktop flow - 6 steps */}
+        {/* Desktop flow - 4 steps */}
         <div className="hidden lg:block relative mb-16">
           {/* Connection line */}
-          <div className="absolute top-8 left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20" />
+          <div className="absolute top-8 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20" />
           
-          <div className="grid grid-cols-6 gap-3">
+          <div className="grid grid-cols-4 gap-6">
             {steps.map((step, i) => (
               <motion.div
                 key={step.title}
@@ -97,13 +90,13 @@ export const HowItWorks = () => {
                     >
                       <step.icon className="w-7 h-7 text-primary" />
                     </motion.div>
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-medium px-2 py-0.5 rounded-full">
-                      {i + 1}
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-bold px-2 py-0.5 rounded-full">
+                      {step.number}
                     </div>
                   </div>
-                  <span className="text-[10px] text-primary uppercase tracking-wider mb-1">{step.action}</span>
+                  <span className="text-xs text-primary uppercase tracking-wider mb-1 font-medium">{step.action}</span>
                   <h3 className="text-sm font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-[11px] text-muted-foreground leading-relaxed">{step.description}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -126,13 +119,11 @@ export const HowItWorks = () => {
                   <step.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div className="absolute -bottom-1 -right-1 bg-primary text-primary-foreground text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
-                  {i + 1}
+                  {step.number}
                 </div>
               </div>
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] text-primary uppercase tracking-wider">{step.action}</span>
-                </div>
+                <span className="text-[10px] text-primary uppercase tracking-wider font-medium">{step.action}</span>
                 <h3 className="text-sm font-semibold text-foreground mb-1">{step.title}</h3>
                 <p className="text-xs text-muted-foreground">{step.description}</p>
               </div>
@@ -153,7 +144,7 @@ export const HowItWorks = () => {
           <div className="inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 px-6 py-3">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <p className="text-sm text-muted-foreground">
-              <span className="text-foreground font-medium">Not an all-in-one suite.</span> A modular operating layer that works with your existing tools.
+              <span className="text-foreground font-medium">Start with one corridor.</span> Scale when ready.
             </p>
           </div>
         </motion.div>

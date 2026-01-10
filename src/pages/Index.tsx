@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { TopNav } from "@/components/marketing/TopNav";
 import { HomePage } from "@/components/marketing/HomePage";
 import { PlatformPage } from "@/components/marketing/PlatformPage";
-import { ModulesPage } from "@/components/marketing/ModulesPage";
 import { SolutionsPage } from "@/components/marketing/SolutionsPage";
 import { TrustPage } from "@/components/marketing/TrustPage";
 import { ResourcesPage } from "@/components/marketing/ResourcesPage";
@@ -15,7 +14,7 @@ import { CookieConsent } from "@/components/marketing/CookieConsent";
 import { BackToTop } from "@/components/marketing/BackToTop";
 import { ScrollProgress } from "@/components/marketing/ScrollProgress";
 
-type PageKey = "home" | "platform" | "modules" | "solutions" | "trust" | "resources" | "company" | "pricing" | "blog";
+type PageKey = "home" | "platform" | "solutions" | "trust" | "resources" | "company" | "pricing" | "blog";
 
 const Index = () => {
   const [page, setPage] = useState<PageKey>("home");
@@ -24,8 +23,6 @@ const Index = () => {
     switch (page) {
       case "platform":
         return <PlatformPage />;
-      case "modules":
-        return <ModulesPage />;
       case "solutions":
         return <SolutionsPage />;
       case "trust":
@@ -55,7 +52,7 @@ const Index = () => {
         </PageTransition>
       </main>
 
-      <Footer />
+      <Footer setPage={setPage} />
       <BackToTop />
       <CookieConsent />
     </div>

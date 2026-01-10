@@ -10,27 +10,27 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: "What is TRAIBOX?",
-    answer: "TRAIBOX is the operating layer for modern trade — a single platform to run deals end-to-end, from intent and partner matching through compliance, funding, payments, and verifiable proof generation.",
+    answer: "TRAIBOX is the operating layer for modern trade — a single workspace to run deals end-to-end with clarity, compliance, payments, and proof. Think of it as the coordination layer between your systems, partners, and workflows.",
   },
   {
-    question: "How does TRAIBOX handle compliance?",
-    answer: "We provide built-in KYC/AML, sanctions screening, export controls, and ESG/CBAM checks. Every decision is explainable with evidence attached, designed for real compliance workflows and audits.",
+    question: "Do I need to replace my ERP or TMS?",
+    answer: "No. TRAIBOX works with your existing tools. We connect via APIs, webhooks, and events to ERPs, logistics platforms, banking/PSPs, and compliance providers. No rip-and-replace required.",
   },
   {
-    question: "Is my data secure?",
-    answer: "Absolutely. TRAIBOX is built with security-first architecture including RBAC/ABAC, mTLS, vault-backed secrets, and EU data residency by default. We never put sensitive PII on-chain.",
+    question: "How does compliance work?",
+    answer: "TRAIBOX provides built-in checks for KYC/AML, sanctions screening, export controls, and ESG/CBAM where applicable. Every decision comes with evidence attached — designed for real audit workflows.",
   },
   {
-    question: "How do proofs work?",
-    answer: "TRAIBOX generates deterministic audit packs with cryptographic proofs. You can optionally anchor proofs to a ledger for additional verification, but sensitive data never leaves your control.",
+    question: "How do payments work?",
+    answer: "You can route and execute payments via connected banking and PSP rails. TRAIBOX tracks status, handles reconciliation, and gives you visibility across currencies and routes — all in one place.",
   },
   {
-    question: "Can I start with a pilot?",
-    answer: "Yes! We recommend starting with a single corridor (e.g., PT↔ES) to validate the full flow, then expanding. The core platform stays stable as you add new markets and rules.",
+    question: "What does 'proof' mean?",
+    answer: "Every critical action produces a traceable record: what happened, when, and why. You can export audit packs anytime. Optionally, anchor integrity proofs to a ledger for additional verification — no sensitive data goes on-chain.",
   },
   {
-    question: "What integrations are available?",
-    answer: "TRAIBOX provides stable APIs for trade, compliance, finance, payments, and proofs. We maintain Postman/Insomnia collections and deployment profiles for quick partner integration.",
+    question: "Can I start with a pilot corridor?",
+    answer: "Yes, and we recommend it. Start with a single corridor (e.g., Portugal ↔ Spain) to validate the full flow, then expand to more markets and modules when you're ready.",
   },
 ];
 

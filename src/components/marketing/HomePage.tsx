@@ -1,17 +1,13 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { Hero } from "./Hero";
 import { Divider } from "./Divider";
+import { ProblemSection } from "./ProblemSection";
+import { OutcomesSection } from "./OutcomesSection";
+import { CapabilitiesSection } from "./CapabilitiesSection";
 import { HowItWorks } from "./HowItWorks";
+import { EcosystemSection } from "./EcosystemSection";
+import { ProofsSection } from "./ProofsSection";
 import { FAQ } from "./FAQ";
 import { CTASection } from "./CTASection";
-import { DesignedOutcomes } from "./DesignedOutcomes";
-import { ModulesSection } from "./ModulesSection";
-import { TrustPosture } from "./TrustPosture";
-import { ArchitectureSection } from "./ArchitectureSection";
-import { ComparisonTable } from "./ComparisonTable";
-import { BRAND } from "@/lib/constants";
 
 export const HomePage = () => {
   return (
@@ -19,34 +15,27 @@ export const HomePage = () => {
       <Hero />
 
       <Divider />
-      <DesignedOutcomes />
+      <ProblemSection />
+      
       <Divider />
+      <OutcomesSection />
 
-      {/* Architecture - The Operating Layer */}
-      <ArchitectureSection />
       <Divider />
+      <CapabilitiesSection />
 
-      {/* Modules - What users see in the app */}
-      <ModulesSection />
       <Divider />
-
-      {/* How it works flow */}
       <HowItWorks />
-      <Divider />
 
-      {/* Comparison - Why TRAIBOX */}
-      <ComparisonTable />
       <Divider />
+      <EcosystemSection />
 
-      {/* Trust & Security Posture */}
-      <TrustPosture />
       <Divider />
+      <ProofsSection />
 
-      {/* FAQ */}
+      <Divider />
       <FAQ />
-      <Divider />
 
-      {/* Final CTA */}
+      <Divider />
       <CTASection />
     </>
   );
