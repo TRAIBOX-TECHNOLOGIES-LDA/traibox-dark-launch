@@ -17,7 +17,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <TraiboxLogo className="h-32" />
+              <TraiboxLogo className="h-24" />
             </Link>
             <p className="text-sm text-muted-foreground">
               {BRAND.tagline}

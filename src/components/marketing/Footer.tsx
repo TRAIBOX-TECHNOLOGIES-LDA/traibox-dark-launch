@@ -26,7 +26,7 @@ export const Footer = ({ setPage }: FooterProps) => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
-              <TraiboxLogo className="h-7 w-7" showText textClassName="text-base font-semibold tracking-tight" />
+              <TraiboxLogo className="h-32" />
             </div>
             <p className="text-xs text-muted-foreground mb-4">
               {BRAND.tagline}
