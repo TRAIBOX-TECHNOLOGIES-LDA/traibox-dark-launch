@@ -200,8 +200,8 @@ export const Hero = () => {
                   Release gates tied to reliability targets, clear incident comms, and a launch checklist designed
                   for pilots → GA.
                 </p>
-                <a href="#trust" className="inline-flex items-center gap-1 text-xs text-primary hover:underline group">
-                  See trust & operations <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
+                <a href="#trust-security" className="inline-flex items-center gap-1 text-xs text-primary hover:underline group">
+                  See trust & security <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </motion.div>
             </div>
