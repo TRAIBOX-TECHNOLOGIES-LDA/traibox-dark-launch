@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { TraiboxLogo } from "@/components/marketing/TraiboxLogo";
 
 const navLinks = [
   { label: "Product", href: "#product" },
@@ -31,11 +32,8 @@ export const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">T</span>
-            </div>
-            <span className="text-foreground font-semibold text-lg tracking-tight">TRAIBOX</span>
+          <Link to="/" className="flex items-center">
+            <TraiboxLogo className="h-8 w-8" showText textClassName="text-lg font-semibold tracking-tight" />
           </Link>
 
           {/* Desktop Navigation */}

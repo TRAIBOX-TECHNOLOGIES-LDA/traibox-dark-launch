@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { TraiboxLogo } from "@/components/marketing/TraiboxLogo";
+import { BRAND } from "@/lib/constants";
 
 const footerLinks = {
   Product: ["Platform", "Features", "Security", "Pricing"],
@@ -14,14 +16,11 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">T</span>
-              </div>
-              <span className="text-foreground font-semibold text-lg tracking-tight">TRAIBOX</span>
+            <Link to="/" className="inline-block mb-4">
+              <TraiboxLogo className="h-8 w-8" showText textClassName="text-lg font-semibold tracking-tight" />
             </Link>
             <p className="text-sm text-muted-foreground">
-              The operating system for critical data.
+              {BRAND.tagline}
             </p>
           </div>
 
