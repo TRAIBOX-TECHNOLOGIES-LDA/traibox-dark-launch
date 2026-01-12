@@ -48,7 +48,7 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            <p>TRAIBOX is the Trade Engine where modern businesses plug in once to run every trade end-to-end in one intelligent workspace.</p>
+            <p>TRAIBOX is the Trade Engine for modern businesses.<br />Plug in once to run every trade end-to-end in one intelligent workspace.</p>
           </motion.div>
 
           {/* CTAs */}
