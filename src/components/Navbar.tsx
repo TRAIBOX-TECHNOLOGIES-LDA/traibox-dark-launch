@@ -32,8 +32,9 @@ export const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <TraiboxLogo className="h-8 w-8" showText textClassName="text-lg font-semibold tracking-tight" />
+          <Link to="/" className="flex items-center gap-2">
+            <TraiboxLogo className="h-8 w-8" />
+            <span className="text-lg font-semibold tracking-tight text-foreground">TRAIBOX</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -38,7 +38,7 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6"
           >
-            Make global trade feel local.
+            Trade global like a local.
           </motion.h1>
 
           {/* Subtitle */}
@@ -48,8 +48,7 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            Run a trade safely end-to-end with clarity, compliance, payments, and proof — 
-            in a network of trust.
+            TRAIBOX is the Trade Engine for modern businesses. Plug in once to run every trade end-to-end —from intent to partners, financing, payments, and proof— in one intelligent workspace, made easy.
           </motion.p>
 
           {/* CTAs */}
