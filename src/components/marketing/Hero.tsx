@@ -18,7 +18,7 @@ export const Hero = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-wrap justify-center gap-2 mb-8"
           >
-            {["AI-first workspace", "Compliance-ready", "Payments + finance", "Audit proofs"].map((pill, i) => (
+            {["AI for Trade", "On-Chain Proof", "Trusted Networks", "Multi-Rail Payments"].map((pill, i) => (
               <motion.span
                 key={pill}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -49,7 +49,7 @@ export const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto space-y-4"
           >
             <p>TRAIBOX is the Trade Engine for modern businesses.</p>
-            <p>Plug in once to run every trade end-to-end —from intent to partners, financing, payments, and proof— in one intelligent workspace, <span className="whitespace-nowrap">MADE EASY!</span></p>
+            <p>Plug in once to run every trade end-to-end in one intelligent workspace, made easy.</p>
           </motion.div>
 
           {/* CTAs */}
@@ -85,9 +85,9 @@ export const Hero = () => {
             className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto"
           >
             {[
-              { icon: Sparkles, title: "AI-first, human-controlled", desc: "The assistant helps, the user decides." },
-              { icon: Shield, title: "Explainable outcomes", desc: "Every key result includes 'why'." },
-              { icon: Lock, title: "Evidence by default", desc: "Every step produces exportable proof." },
+              { icon: Sparkles, title: "Make every trade finance-ready.", desc: "Turn messy docs into structured data lenders trust." },
+              { icon: Shield, title: "Connect once to trade with many.", desc: "Find partners, create and join Networks of Trust." },
+              { icon: Lock, title: "Trade Passport-ready, with compliance built in.", desc: "Stay ready for ESG, CBAM, and KYC/AML, without rewiring." },
             ].map((item, i) => (
               <motion.div 
                 key={item.title} 
