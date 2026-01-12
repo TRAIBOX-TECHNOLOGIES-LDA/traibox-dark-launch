@@ -15,28 +15,44 @@ export const HomePage = () => {
       <Hero />
 
       <Divider />
-      <ProblemSection />
+      <section id="problem">
+        <ProblemSection />
+      </section>
       
       <Divider />
-      <OutcomesSection />
+      <section id="outcomes">
+        <OutcomesSection />
+      </section>
 
       <Divider />
-      <CapabilitiesSection />
+      <section id="capabilities">
+        <CapabilitiesSection />
+      </section>
 
       <Divider />
-      <HowItWorks />
+      <section id="how-it-works">
+        <HowItWorks />
+      </section>
 
       <Divider />
-      <EcosystemSection />
+      <section id="ecosystem">
+        <EcosystemSection />
+      </section>
 
       <Divider />
-      <ProofsSection />
+      <section id="proofs">
+        <ProofsSection />
+      </section>
 
       <Divider />
-      <FAQ />
+      <section id="faq">
+        <FAQ />
+      </section>
 
       <Divider />
-      <CTASection />
+      <section id="cta">
+        <CTASection />
+      </section>
     </>
   );
 };
