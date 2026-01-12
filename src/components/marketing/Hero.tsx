@@ -18,7 +18,7 @@ export const Hero = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-wrap justify-center gap-2 mb-8"
           >
-            {["AI for Trade", "On-Chain Proof", "Trusted Networks", "Multi-Rail Payments"].map((pill, i) => (
+            {["Contextual AI", "On-Chain Proof", "Trusted Networks", "Multi-Rail Payments"].map((pill, i) => (
               <motion.span
                 key={pill}
                 initial={{ opacity: 0, scale: 0.9 }}
