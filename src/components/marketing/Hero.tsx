@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Shield, Lock } from "lucide-react";
+import { ArrowRight, Sparkles, Shield, Lock, ChevronDown } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 import { AnimatedBackground } from "./AnimatedBackground";
+import { smoothScrollTo } from "@/hooks/useSmoothScroll";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen pt-32 md:pt-40 pb-16 overflow-hidden">
+    <section id="hero" className="relative min-h-screen pt-32 md:pt-40 pb-16 overflow-hidden">
       <AnimatedBackground />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -103,6 +104,24 @@ export const Hero = () => {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Scroll indicator */}
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            onClick={() => smoothScrollTo("problem")}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 hover:text-white/60 transition-colors cursor-pointer"
+            aria-label="Scroll to learn more"
+          >
+            <span className="text-xs">Learn more</span>
+            <motion.div
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ChevronDown className="h-5 w-5" />
+            </motion.div>
+          </motion.button>
         </div>
       </div>
     </section>
