@@ -49,7 +49,7 @@ export const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto space-y-4"
           >
             <p>TRAIBOX is the Trade Engine for modern businesses.</p>
-            <p>Plug in once to run every trade end-to-end —from intent to partners, financing, payments, and proof— in one intelligent workspace, MADE EASY!</p>
+            <p>Plug in once to run every trade end-to-end —from intent to partners, financing, payments, and proof— in one intelligent workspace, <span className="whitespace-nowrap">MADE EASY!</span></p>
           </motion.div>
 
           {/* CTAs */}
