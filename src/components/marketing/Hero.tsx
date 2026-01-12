@@ -48,7 +48,7 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            <p>TRAIBOX is the Trade Engine where modern businesses Plug in once to run every trade end-to-end in one intelligent workspace.</p>
+            <p>TRAIBOX is the Trade Engine where modern businesses plug in once to run every trade end-to-end in one intelligent workspace.</p>
           </motion.div>
 
           {/* CTAs */}
@@ -86,7 +86,7 @@ export const Hero = () => {
             {[
               { icon: Sparkles, title: "Make every trade finance-ready.", desc: "Turn messy docs into structured data lenders trust." },
               { icon: Shield, title: "Connect once to trade with many.", desc: "Find partners, create and join Networks of Trust." },
-              { icon: Lock, title: "Trade Passport-ready, with compliance built in.", desc: "Stay ready for ESG, CBAM, and KYC/AML, without rewiring." },
+              { icon: Lock, title: "Your Trade Passport, with compliance built in.", desc: "Stay ready for ESG, CBAM, and KYC/AML, without rewiring." },
             ].map((item, i) => (
               <motion.div 
                 key={item.title} 
