@@ -10,7 +10,7 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: "What is TRAIBOX?",
-    answer: "TRAIBOX is the operating layer for modern trade — a single workspace to run deals end-to-end with clarity, compliance, payments, and proof. Think of it as the coordination layer between your systems, partners, and workflows.",
+    answer: "TRAIBOX is a Trade Intelligence Box — an Engine for modern trade. A single workspace to run deals end-to-end with clarity, compliance, payments, and proof. Think of it as the coordination layer between your systems, partners, and workflows. Made easy, accessible, fast and secure to take your business further.",
   },
   {
     question: "Do I need to replace my ERP or TMS?",
@@ -49,7 +49,7 @@ export const FAQ = () => {
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Frequently asked questions
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-white/70">
             Everything you need to know about TRAIBOX.
           </p>
         </motion.div>
@@ -85,7 +85,7 @@ export const FAQ = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="px-5 pb-5">
-                      <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                      <p className="text-sm text-white/70 leading-relaxed">{faq.answer}</p>
                     </div>
                   </motion.div>
                 )}

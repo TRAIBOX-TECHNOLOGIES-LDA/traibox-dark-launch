@@ -3,7 +3,7 @@ import { FileCheck, Lock, Link as LinkIcon } from "lucide-react";
 
 export const ProofsSection = () => {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,32 +21,32 @@ export const ProofsSection = () => {
               </h2>
             </div>
             
-            <p className="text-muted-foreground mb-6">
+            <p className="text-white/70 mb-6">
               Every critical action creates a record: what happened, when, and why. 
               Export an audit pack anytime. Optionally anchor integrity proofs to a ledger — 
               never sensitive data.
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-3 gap-5">
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5">
                 <FileCheck className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">Audit packs</p>
-                  <p className="text-xs text-muted-foreground">Exportable records with receipts and reasoning.</p>
+                  <p className="text-xs text-white/70 leading-relaxed">Exportable records with receipts and reasoning.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5">
                 <Lock className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">No PII on-chain</p>
-                  <p className="text-xs text-muted-foreground">Sensitive data stays off public ledgers.</p>
+                  <p className="text-xs text-white/70 leading-relaxed">Sensitive data stays off public ledgers.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5">
                 <LinkIcon className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">Ledger anchoring</p>
-                  <p className="text-xs text-muted-foreground">Optional integrity proofs for verification.</p>
+                  <p className="text-xs text-white/70 leading-relaxed">Optional integrity proofs for verification.</p>
                 </div>
               </div>
             </div>

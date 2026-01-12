@@ -20,7 +20,7 @@ const capabilities = [
   {
     icon: Banknote,
     title: "Finance",
-    desc: "Request and compare funding offers where available.",
+    desc: "Request and compare funding offers in minutes.",
   },
   {
     icon: CreditCard,
@@ -36,7 +36,7 @@ const capabilities = [
 
 export const CapabilitiesSection = () => {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export const CapabilitiesSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {capabilities.map((cap, i) => (
             <motion.div
               key={cap.title}
@@ -60,7 +60,7 @@ export const CapabilitiesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="flex items-start gap-4 p-5 rounded-xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors"
+              className="flex items-start gap-4 p-6 rounded-xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors"
             >
               <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center">
                 <cap.icon className="h-5 w-5 text-primary" />
@@ -69,7 +69,7 @@ export const CapabilitiesSection = () => {
                 <h3 className="text-sm font-semibold text-foreground mb-1">
                   {cap.title}
                 </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-xs text-white/70 leading-relaxed">
                   {cap.desc}
                 </p>
               </div>

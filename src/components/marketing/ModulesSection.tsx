@@ -84,7 +84,7 @@ const modules = [
 
 export const ModulesSection = () => {
   return (
-    <section id="modules" className="py-24 md:py-32 relative">
+    <section id="modules" className="py-28 md:py-36 relative">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,12 +98,12 @@ export const ModulesSection = () => {
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
             What users see in the app
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-white/70">
             A small set of simple modules. Complex work happens under the hood.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {modules.map((module, i) => (
             <motion.div
               key={module.name}
@@ -120,13 +120,13 @@ export const ModulesSection = () => {
                 <h3 className="text-sm font-semibold text-foreground">{module.name}</h3>
               </div>
               
-              <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-xs text-white/70 mb-4 leading-relaxed">
                 {module.tagline}
               </p>
               
               <ul className="space-y-2">
                 {module.bullets.map((bullet, j) => (
-                  <li key={j} className="flex items-start gap-2 text-xs text-white/60">
+                  <li key={j} className="flex items-start gap-2 text-xs text-white/65">
                     <span className="w-1 h-1 rounded-full bg-primary/60 mt-1.5 flex-shrink-0" />
                     {bullet}
                   </li>
