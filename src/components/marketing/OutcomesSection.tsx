@@ -26,7 +26,7 @@ const outcomes = [
 
 export const OutcomesSection = () => {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export const OutcomesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group text-center p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors"
+              className="group text-center p-6 md:p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors"
             >
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 mb-5 group-hover:bg-primary/20 transition-colors">
                 <outcome.icon className="w-7 h-7 text-primary" />
@@ -58,7 +58,7 @@ export const OutcomesSection = () => {
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {outcome.title}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-white/70">
                 {outcome.desc}
               </p>
             </motion.div>

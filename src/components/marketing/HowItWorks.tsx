@@ -43,7 +43,7 @@ const steps: Step[] = [
 
 export const HowItWorks = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section className="py-28 md:py-36 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent pointer-events-none" />
       
@@ -61,7 +61,7 @@ export const HowItWorks = () => {
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Four steps. Full clarity.
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-white/70">
             From first conversation to verifiable proof — one flow that handles the complexity.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export const HowItWorks = () => {
                   </div>
                   <span className="text-xs text-primary uppercase tracking-wider mb-1 font-medium">{step.action}</span>
                   <h3 className="text-sm font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
+                  <p className="text-xs text-white/70 leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -104,7 +104,7 @@ export const HowItWorks = () => {
         </div>
 
         {/* Mobile flow */}
-        <div className="lg:hidden space-y-3">
+        <div className="lg:hidden space-y-4">
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
@@ -112,7 +112,7 @@ export const HowItWorks = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors"
+              className="flex items-start gap-4 p-5 rounded-xl border border-white/10 bg-white/[0.02] hover:border-primary/30 transition-colors"
             >
               <div className="flex-shrink-0 relative">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -125,7 +125,7 @@ export const HowItWorks = () => {
               <div className="flex-1 min-w-0">
                 <span className="text-[10px] text-primary uppercase tracking-wider font-medium">{step.action}</span>
                 <h3 className="text-sm font-semibold text-foreground mb-1">{step.title}</h3>
-                <p className="text-xs text-muted-foreground">{step.description}</p>
+                <p className="text-xs text-white/70 leading-relaxed">{step.description}</p>
               </div>
               {i < steps.length - 1 && (
                 <ArrowRight className="w-4 h-4 text-white/20 flex-shrink-0 mt-4" />
@@ -143,7 +143,7 @@ export const HowItWorks = () => {
         >
           <div className="inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/5 px-6 py-3">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/70">
               <span className="text-foreground font-medium">Start with one corridor.</span> Scale when ready.
             </p>
           </div>

@@ -5,7 +5,7 @@ import { BRAND } from "@/lib/constants";
 
 export const CTASection = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section className="py-28 md:py-36 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
@@ -34,7 +34,7 @@ export const CTASection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
+                className="text-lg text-white/70 mb-8 max-w-2xl mx-auto"
               >
                 See the full flow in action with a pilot. Our team will help you get started.
               </motion.p>
@@ -57,7 +57,7 @@ export const CTASection = () => {
                   href={BRAND.appUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-sm font-medium text-white hover:bg-white/10 transition"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition"
                 >
                   Launch app
                   <ArrowRight className="h-4 w-4" />
@@ -69,7 +69,7 @@ export const CTASection = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="mt-6 text-xs text-muted-foreground"
+                className="mt-6 text-xs text-white/60"
               >
                 No credit card • Pilot-first • Expand modules over time
               </motion.p>

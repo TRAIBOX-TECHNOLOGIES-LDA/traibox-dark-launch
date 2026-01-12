@@ -18,7 +18,7 @@ export const Hero = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-wrap justify-center gap-2 mb-8"
           >
-            {["Contextual AI", "On-Chain Proof", "Trusted Networks", "Multi-Rail Payments"].map((pill, i) => (
+            {["Contextual AI for Trade", "On-chain proof", "Multi-rail payments", "Trusted networks"].map((pill, i) => (
               <motion.span
                 key={pill}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -56,7 +56,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 mb-16"
+            className="flex flex-wrap justify-center items-center gap-4 mb-16"
           >
             <Link
               to="/request-access"
@@ -69,7 +69,7 @@ export const Hero = () => {
               href={BRAND.appUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-white hover:bg-white/10 transition backdrop-blur-sm"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition"
             >
               Launch app
               <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
