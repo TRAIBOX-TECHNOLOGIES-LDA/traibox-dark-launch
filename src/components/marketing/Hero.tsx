@@ -39,7 +39,7 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6"
           >
-            Trade global like a local.
+            Make trade flow. Everywhere.
           </motion.h1>
 
           {/* Subtitle */}
@@ -47,9 +47,9 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed md:leading-relaxed"
+            className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed md:leading-relaxed"
           >
-            <p>TRAIBOX is the Trade Engine for modern businesses.<br />Plug in once to run every trade end-to-end in one intelligent workspace.</p>
+            <p>Remove trade complexity and turn intent into faster, safer execution. TRAIBOX is your trade intelligence engine running compliance, finance, payments, and proof as one continuous flow in a secure workspace, helping your business scale globally.</p>
           </motion.div>
 
           {/* CTAs */}
