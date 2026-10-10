@@ -39,7 +39,9 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6"
           >
-            Make trade flow. Everywhere.
+            <span className="inline-block">Trade<span className="text-primary">.</span></span>{" "}
+            <span className="inline-block">Flow<span className="text-primary">.</span></span>{" "}
+            <span className="inline-block">Grow<span className="text-primary">.</span></span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -49,7 +51,7 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed md:leading-relaxed"
           >
-            <p>Remove trade complexity and turn intent into faster, safer execution. TRAIBOX is your trade intelligence engine running compliance, finance, payments, and proof as one continuous flow in a secure workspace, helping your business scale globally.</p>
+            <p>Trade without the friction. Flow through partners, financing, payments, and proof as one continuous motion. TRAIBOX is your trade intelligence engine running it all in a secure workspace, so your business can grow globally.</p>
           </motion.div>
 
           {/* CTAs */}
