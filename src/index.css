@@ -582,3 +582,19 @@
   --v6-hairline-dark: 210 20% 90% / 0.08;
   --v6-hairline-light: 214 24% 6% / 0.045;
 }
+
+/* V7 immersive palette (scoped usage under .v7-site) */
+:root {
+  --v7-obsidian: 216 28% 4%;
+  --v7-deep: 214 40% 8%;
+  --v7-atmos: 211 42% 15%;
+  --v7-mist: 204 28% 86%;
+  --v7-porcelain: 40 24% 94%;
+  --v7-sand: 36 30% 84%;
+  --v7-champagne: 38 42% 68%;
+  --v7-titanium: 210 9% 62%;
+  --v7-glacier: 199 78% 64%;
+  --v7-ink: 216 25% 7%;
+  --v7-success: 152 55% 64%;
+  --v7-attention: 36 80% 64%;
+}
