@@ -1,0 +1,504 @@
+{
+  "stages": [
+    [
+      "Intent",
+      "I found the buyer, order value and commercial terms. Let’s check them before you confirm.",
+      [
+        "Purchase order|Received",
+        "Commercial details|Extracted",
+        "Readiness review|Pending"
+      ],
+      "Review transaction"
+    ],
+    [
+      "Readiness",
+      "The order says Net 30, but your quote says Net 15. The buyer check is still open. Let’s resolve both.",
+      [
+        "Commercial details|Reviewed",
+        "Payment terms|Mismatch",
+        "Counterparty checks|Pending"
+      ],
+      "Prepare next steps"
+    ],
+    [
+      "Execution",
+      "I’ve prepared a clarification and a verification request. Review them before anything is sent.",
+      [
+        "Revised terms|Prepared",
+        "Verification request|Draft",
+        "Human approval|Pending"
+      ],
+      "Preview transaction record"
+    ],
+    [
+      "Record",
+      "In this sample, the deal is complete. Its documents and decisions are ready for the next transaction.",
+      [
+        "Transaction record|Organized",
+        "Evidence|Linked",
+        "Reusable context|Available"
+      ],
+      "Restart demonstration"
+    ]
+  ],
+  "flows": [
+    [
+      "Capture. Understand. Prepare.",
+      "Start with an email, a PDF, a spreadsheet or a conversation. TRAIBOX is designed to capture the details, compare the terms and show you what still needs checking.",
+      "TRADE / PO–028",
+      [
+        "Purchase order|€48,500",
+        "Commercial terms|Extracted",
+        "Payment terms|Mismatch",
+        "Buyer check|Pending"
+      ]
+    ],
+    [
+      "Verify. Coordinate. Settle.",
+      "Resolve the gaps, bring in the right people and prepare the approved actions. Connect payment or funding requirements to the deal instead of starting a separate process.",
+      "FLOW / PO–028",
+      [
+        "Revised terms|Draft prepared",
+        "Verification request|Ready for review",
+        "Human approval|Required",
+        "Settlement|Not initiated"
+      ]
+    ],
+    [
+      "Prove. Reuse. Grow.",
+      "Keep the documents, decisions and outcomes together. Reuse relevant, current information on the next deal and spend less time repeating the same work.",
+      "GROW / PO–028",
+      [
+        "Supporting evidence|Organized",
+        "Decision history|Recorded",
+        "Company information|Review before reuse",
+        "Next deal|Context available"
+      ]
+    ]
+  ],
+  "uses": [
+    [
+      "Keep every deal moving.",
+      "See your opportunities, orders and open actions together. Know what is ready, what is waiting and who needs to act.",
+      "Trade / PO–028",
+      "Order in progress",
+      "€48,500",
+      "Industrial components · Sample deal",
+      [
+        "Purchase order|Received",
+        "Payment terms|Mismatch",
+        "Buyer verification|Pending",
+        "Next action|Review terms"
+      ],
+      "A single view of the deal, from first intent to final record."
+    ],
+    [
+      "Turn messy inputs into a clear plan.",
+      "Capture an email, upload a PDF or describe a deal. Agents help interpret documents, spot gaps and prepare the next steps.",
+      "Intelligence / PO–028",
+      "Document review",
+      "2 open items",
+      "Order compared with quotation",
+      [
+        "Commercial information|Reviewed",
+        "Payment terms|Mismatch",
+        "Buyer check|Pending",
+        "Next steps|Draft prepared"
+      ],
+      "See the evidence behind the proposed action."
+    ],
+    [
+      "Know who you are doing business with.",
+      "Organize buyers, suppliers and partners. Bring relevant company information and reusable evidence into each deal.",
+      "Network / Sample buyer",
+      "Counterparty record",
+      "Sample Buyer Ltd.",
+      "Illustrative company record",
+      [
+        "Relationship|Buyer",
+        "Company information|On file",
+        "Verification|Pending",
+        "Disclosure|Permission required"
+      ],
+      "Connect once; reuse current information when permitted."
+    ],
+    [
+      "Connect the deal to the money.",
+      "Bring payment terms, funding needs and settlement into the same workflow. Compare relevant options through financial providers.",
+      "Finance / PO–028",
+      "Settlement planning",
+      "€48,500",
+      "Illustrative payment request",
+      [
+        "Payment terms|Review required",
+        "Funding options|Not requested",
+        "Settlement|Not initiated",
+        "Human approval|Required"
+      ],
+      "Prepare a finance-ready evidence package; provider approval is separate."
+    ],
+    [
+      "Know what needs to be cleared.",
+      "Review identity, relevant requirements, supporting documents and unresolved checks. Keep the reasons and evidence together.",
+      "Clearance / PO–028",
+      "Compliance, readiness & evidence",
+      "2 open checks",
+      "Illustrative review",
+      [
+        "Company identity|Review required",
+        "Relevant requirements|Identified",
+        "Buyer verification|Pending",
+        "Evidence pack|In preparation"
+      ],
+      "Keep decisions traceable. No guarantee of compliance."
+    ]
+  ],
+  "layers": [
+    [
+      "01 / Foundation",
+      "Start with the whole deal.",
+      "An order tells a story: who is buying, what they want, when they need it and what both sides have agreed. Give people and agents that same starting point.",
+      "Sample context / PO–028",
+      [
+        "Buyer|Sample Buyer Ltd.",
+        "Commercial terms|Net 30",
+        "Order value|€48,500",
+        "Source|Purchase order"
+      ],
+      "A coherent representation of the deal that people and agents can work from."
+    ],
+    [
+      "02 / Intelligence",
+      "Find the gaps before they cost you.",
+      "Compare the order with the quote and the relevant rules. Show what matches, what does not and what still needs checking.",
+      "Readiness / PO–028",
+      [
+        "Commercial terms|Reviewed",
+        "Payment terms|Mismatch",
+        "Counterparty|Pending",
+        "Evidence|Source linked"
+      ],
+      "An explainable view of what is ready and what still needs attention."
+    ],
+    [
+      "03 / Orchestration",
+      "Turn a finding into a next step.",
+      "Prepare the clarification, assign the work and ask the right person to approve it. A finding should lead somewhere useful.",
+      "Proposed action plan",
+      [
+        "Action|Request revised terms",
+        "Owner|Commercial team",
+        "Approval|Required",
+        "Execution|Not initiated"
+      ],
+      "Controlled progress, not autonomous commitments without authority."
+    ],
+    [
+      "04 / Memory",
+      "Keep what you learn.",
+      "Keep the documents, decisions and outcomes that matter. Next time, check what is still valid and who is allowed to use it.",
+      "Reusable business context",
+      [
+        "Evidence|Linked to deal",
+        "Decision history|Recorded",
+        "Validity|Review on reuse",
+        "Access|Permission scoped"
+      ],
+      "Business-specific knowledge that can accumulate over time."
+    ],
+    [
+      "05 / Ecosystem",
+      "Work with what you already use.",
+      "Your ERP still holds the records. Your bank still handles the money. TRAIBOX is designed to coordinate the work between supported tools and providers.",
+      "Illustrative integration boundaries",
+      [
+        "ERP / CRM|Commercial records",
+        "Compliance providers|Verification results",
+        "Financial providers|Payment / funding",
+        "Logistics services|Shipment events"
+      ],
+      "Interoperability with existing systems, subject to supported integrations."
+    ]
+  ],
+  "solutions": [
+    [
+      "Move from order to confirmation.",
+      "Review a buyer’s order and resolve commercial or documentation gaps before committing.",
+      "Sales / Order review",
+      "A buyer sends a purchase order.",
+      [
+        "Intelligence agent|Extract terms",
+        "Readiness agent|Compare with quotation",
+        "Execution agent|Draft clarification"
+      ],
+      "Human decision: confirm the revised terms."
+    ],
+    [
+      "Prepare a purchase with confidence.",
+      "Bring supplier details, quotations and purchasing requirements into one review.",
+      "Procurement / Supplier review",
+      "A team prepares a new supplier order.",
+      [
+        "Intelligence agent|Compare quote and order",
+        "Compliance agent|Identify missing evidence",
+        "Execution agent|Prepare supplier request"
+      ],
+      "Human decision: approve supplier and purchase."
+    ],
+    [
+      "Resolve gaps before they delay the deal.",
+      "Review relevant requirements and evidence across the transaction.",
+      "Operations / Readiness",
+      "A transaction has incomplete documentation.",
+      [
+        "Readiness agent|Identify missing document",
+        "Compliance agent|Review relevant requirements",
+        "Execution agent|Prepare follow-up"
+      ],
+      "Human decision: accept evidence or request more."
+    ],
+    [
+      "Bring financial conditions into context.",
+      "Review payment terms and prepare a settlement or financing request through relevant providers.",
+      "Finance / Payment planning",
+      "Payment terms differ between documents.",
+      [
+        "Intelligence agent|Flag mismatch",
+        "Finance agent|Prepare settlement options",
+        "Execution agent|Route for approval"
+      ],
+      "Human decision: approve terms; no money moved."
+    ],
+    [
+      "Work from a better evidence package.",
+      "Illustrate how a business could provide relevant transaction records to a financier, with permission.",
+      "Financial institutions / Evidence review",
+      "A business prepares a financing request.",
+      [
+        "Intelligence agent|Organize deal context",
+        "Evidence agent|Assemble supporting records",
+        "Execution agent|Prepare disclosure request"
+      ],
+      "Human decision: authorize sharing with provider."
+    ]
+  ],
+  "shortOut": [
+    "Build a shared view of the deal.",
+    "Identify what needs attention.",
+    "Move approved work forward.",
+    "Keep knowledge for the next transaction.",
+    "Connect the systems that trade depends on."
+  ],
+  "story": [
+    {
+      "phase": "TRADE",
+      "agent": "Trade intelligence",
+      "title": "The order arrives.",
+      "copy": "A buyer sends a purchase order. TRAIBOX brings the important details into one working record.",
+      "rows": [
+        [
+          "Order",
+          "PO–028"
+        ],
+        [
+          "Amount",
+          "€48,500"
+        ],
+        [
+          "Payment terms",
+          "Net 30"
+        ]
+      ],
+      "note": "Source: sample purchase order.",
+      "core": "ORDER RECEIVED",
+      "nodes": [
+        0
+      ],
+      "next": "Compare the terms →"
+    },
+    {
+      "phase": "TRADE",
+      "agent": "Readiness agent",
+      "title": "Something doesn’t match.",
+      "copy": "The quote says Net 15; the order says Net 30. The agent flags the difference and identifies a pending buyer check.",
+      "rows": [
+        [
+          "Quote",
+          "Net 15"
+        ],
+        [
+          "Purchase order",
+          "Net 30 · mismatch"
+        ],
+        [
+          "Buyer check",
+          "Pending"
+        ]
+      ],
+      "note": "Two items need attention before confirmation.",
+      "core": "REVIEW NEEDED",
+      "nodes": [
+        0,
+        1,
+        2
+      ],
+      "next": "Prepare the next steps →"
+    },
+    {
+      "phase": "FLOW",
+      "agent": "Execution agent",
+      "title": "Prepare the work.",
+      "copy": "Draft a clarification to the buyer and prepare a verification request. The commercial team reviews the proposed actions.",
+      "rows": [
+        [
+          "Clarification",
+          "Draft prepared"
+        ],
+        [
+          "Verification",
+          "Request prepared"
+        ],
+        [
+          "External actions",
+          "Not sent"
+        ]
+      ],
+      "note": "Nothing is sent without approval in this example.",
+      "core": "ACTIONS PREPARED",
+      "nodes": [
+        1,
+        2,
+        5
+      ],
+      "next": "Review the proposed action →"
+    },
+    {
+      "phase": "FLOW",
+      "agent": "Human approval",
+      "title": "Your team makes the call.",
+      "copy": "The commercial lead reviews the evidence and proposed clarification. Choose whether to approve the simulated action or hold it.",
+      "rows": [
+        [
+          "Action",
+          "Request revised terms"
+        ],
+        [
+          "Evidence",
+          "Order + quotation"
+        ],
+        [
+          "Decision",
+          "Approval required"
+        ]
+      ],
+      "note": "This is a simulated approval. No real message is sent.",
+      "core": "AWAITING APPROVAL",
+      "nodes": [
+        0,
+        1,
+        5
+      ],
+      "next": "Approve in preview →"
+    },
+    {
+      "phase": "FLOW",
+      "agent": "Finance coordination",
+      "title": "From agreement to payment.",
+      "copy": "Assume the buyer accepted Net 15, verification was completed, and delivery and payment were confirmed by the relevant providers. TRAIBOX records those events.",
+      "rows": [
+        [
+          "Revised terms",
+          "Net 15 · assumed"
+        ],
+        [
+          "Delivery",
+          "Confirmed · sample"
+        ],
+        [
+          "Payment",
+          "€48,500 · simulated"
+        ]
+      ],
+      "note": "No funds moved. Provider events are fictional.",
+      "core": "SAMPLE SETTLEMENT",
+      "nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "next": "Keep what we learned →"
+    },
+    {
+      "phase": "GROW",
+      "agent": "Evidence & memory",
+      "title": "The next deal starts ahead.",
+      "copy": "Keep the agreed terms, supporting records and decisions together. When the buyer returns, check the information is still valid and reuse what is permitted.",
+      "rows": [
+        [
+          "Decision history",
+          "Recorded · sample"
+        ],
+        [
+          "Buyer evidence",
+          "Available for review"
+        ],
+        [
+          "Next order",
+          "Context ready to check"
+        ]
+      ],
+      "note": "Knowledge stays within the authorized business context.",
+      "core": "REUSABLE CONTEXT",
+      "nodes": [
+        0,
+        4
+      ],
+      "next": "Restart the walkthrough ↺"
+    }
+  ],
+  "texts": [
+    "Bring the order, quotation and company details into a shared transaction context.",
+    "Coordinate checks, decisions and approved requests across your existing systems and partners.",
+    "Keep the useful records and decisions connected to the next deal."
+  ],
+  "routes": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2,
+      3,
+      4
+    ],
+    [
+      1,
+      4,
+      5
+    ]
+  ],
+  "stack": [
+    [
+      "Order and customer context",
+      "Bring relevant commercial information from your existing systems into a transaction review, and return authorized updates where supported."
+    ],
+    [
+      "Opportunities and orders",
+      "Capture relevant marketplace orders and associated commercial details into the deal context."
+    ],
+    [
+      "Delivery and milestones",
+      "Use relevant shipment and delivery events to update the transaction, without replacing logistics providers."
+    ],
+    [
+      "Payments and funding",
+      "Prepare requests and receive status updates through supported financial providers, subject to approval."
+    ],
+    [
+      "Verification and evidence",
+      "Request appropriate checks through providers and preserve relevant results with the deal."
+    ]
+  ]
+}

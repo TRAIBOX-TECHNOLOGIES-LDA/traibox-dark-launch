@@ -1,0 +1,60 @@
+/* Layout adaptations keep the supplied design usable with a persistent header. */
+.v6-site { background: hsl(var(--v6-porcelain)); color: hsl(var(--v6-tone-1)); letter-spacing: 0; }
+.v6-site .hero-shell { background: hsl(var(--v6-obsidian)); }
+.v6-site .hero-v4 h1 { font-size: 116px; }
+.v6-site .hero-v4 .lead { font-size: 20px; }
+.v6-site .hero-v4 .product .brandmark, .v6-site .hero-v4 .product .sidebrand { filter: none; }
+.v6-site .walk-sticky { top: 96px; }
+.v6-site .walk-hint { display: none; }
+.v6-site .progress-step-0 { width: 25%; }
+.v6-site .progress-step-1 { width: 50%; }
+.v6-site .progress-step-2 { width: 75%; }
+.v6-site .progress-step-3 { width: 100%; }
+.v6-site .walk-meter .progress-step-0 { width: 20%; }
+.v6-site .walk-meter .progress-step-1 { width: 40%; }
+.v6-site .walk-meter .progress-step-2 { width: 60%; }
+.v6-site .walk-meter .progress-step-3 { width: 80%; }
+.v6-site .walk-meter .progress-step-4 { width: 100%; }
+.v6-site .lead-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.v6-site .form-error { color: hsl(var(--destructive)); margin-top: 16px; }
+.v6-site dialog { max-height: 90dvh; padding: 0; }
+.v6-site .dialog-content { padding: 27px; }
+.v6-site dialog label, .v6-site .access-page label { display: block; font-size: 12px; font-weight: 600; margin: 12px 0 5px; }
+.v6-site dialog input, .v6-site dialog select, .v6-site .access-page input, .v6-site .access-page select { width: 100%; padding: 10px; border: 1px solid hsl(var(--v6-steel)); border-radius: 3px; background: hsl(var(--v6-white)); color: hsl(var(--v6-obsidian)); }
+.v6-site .access-page { min-height: 100dvh; max-width: 460px; margin: auto; padding: 48px 24px; }
+.v6-site .access-page h2 { font-size: 36px; margin: 24px 0 16px; }
+.v6-site .access-page .submit { width: 100%; margin-top: 24px; }
+.v6-site .access-page .note { margin-top: 16px; font-size: 12px; }
+.v6-site :is(h1,h2,h3,.metric,.amount) { letter-spacing: 0; }
+.v6-site button { white-space: normal; }
+.v6-site .check > :last-child { text-align: right; }
+.v6-site .packet { opacity: .8; }
+.v6-site.motion-paused :is(.route,.stack-link i,.orbit-path,.intro-paths path,.hero-trace path,.pulse,.node-dot,.scene-lines path) { animation-play-state: paused; }
+@media (max-width: 1100px) and (min-width: 761px) { .v6-site .hero-v4 h1 { font-size: 88px; } .v6-site .navlinks { gap: 12px; } .v6-site .header .brandimg { width: 145px; } }
+@media (max-width: 760px) {
+  .v6-site .hero-v4 h1 { font-size: 60px; }
+  .v6-site .hero-v4 .lead { font-size: 17px; }
+  .v6-site .section h2, .v6-site .architecturechapter h2 { font-size: 44px; }
+  .v6-site .hero-meta { gap: 22px; }
+  .v6-site .walk-sticky { top: 68px; }
+  .v6-site .cta h2 { font-size: 64px; }
+  .v6-site .header .nav { gap: 8px; }
+  .v6-site .walk-card { scroll-margin-top: 430px; }
+  .v6-site .scene-intro h2 { font-size: 44px; }
+  .v6-site .journey-tabs h3 { font-size: 28px; }
+}
+@media (max-width: 420px) {
+  .v6-site .hero-v4 h1 { font-size: 46px; }
+  .v6-site .header .brandimg { width: 103px; }
+  .v6-site .header .brandmark { width: 24px; }
+  .v6-site .section h2, .v6-site .architecturechapter h2 { font-size: 36px; }
+  .v6-site .journey-tabs h3 { font-size: 23px; }
+  .v6-site .journey-tabs .mono { font-size: 8px; }
+  .v6-site .journey-tabs p { font-size: 10px; }
+  .v6-site .scene-intro h2 { font-size: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .v6-site *, .v6-site *::before, .v6-site *::after { animation: none !important; transition: none !important; }
+  .v6-site .packet { display: none; }
+}
