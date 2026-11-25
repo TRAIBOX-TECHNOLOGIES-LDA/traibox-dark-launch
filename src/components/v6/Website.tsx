@@ -15,6 +15,7 @@ import { CompanySection } from './CompanySection';
 import { AccessDialog } from './AccessForm';
 import './reference.css';
 import './adaptations.css';
+import './premium.css';
 
 function WebsiteContent() {
   const ctx = useV6();

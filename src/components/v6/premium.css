@@ -1,0 +1,90 @@
+/* Premium colour & surface layer — overrides reference flat fills */
+.v6-site { background: hsl(var(--v6-parchment)); }
+
+/* Dark environments: layered void with atmospheric depth */
+.v6-site .hero-shell,
+.v6-site .dark {
+  background:
+    radial-gradient(ellipse 80% 55% at 70% 0%, hsl(var(--v6-laser) / 0.09), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 0% 100%, hsl(var(--v6-surface-2) / 0.9), transparent 70%),
+    hsl(var(--v6-void));
+  color: hsl(var(--v6-porcelain));
+  position: relative;
+}
+.v6-site .hero-shell::before,
+.v6-site .dark::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(hsl(var(--v6-white) / 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent);
+}
+.v6-site .hero-shell > *, .v6-site .dark > * { position: relative; }
+
+/* Light environments: editorial parchment with drafting grid */
+.v6-site .section:not(.dark) {
+  background-color: hsl(var(--v6-parchment));
+  background-image:
+    linear-gradient(hsl(var(--v6-hairline-light)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--v6-hairline-light)) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: -1px -1px;
+  border-top: 1px solid hsl(var(--v6-hairline-light));
+}
+.v6-site .section:not(.dark) h2 { color: hsl(var(--v6-ink)); }
+
+/* Header: frosted, precise */
+.v6-site .header {
+  background: hsl(var(--v6-parchment) / 0.78);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid hsl(var(--v6-hairline-light));
+}
+
+/* Machined product terminal */
+.v6-site .product {
+  background: hsl(var(--v6-surface));
+  border: 1px solid hsl(var(--v6-hairline-dark));
+  box-shadow:
+    inset 0 1px 0 hsl(var(--v6-white) / 0.09),
+    0 40px 100px -20px hsl(0 0% 0% / 0.7),
+    0 0 0 1px hsl(var(--v6-laser) / 0.06);
+}
+
+/* Buttons: ink primary with laser edge */
+.v6-site .btn:not(.outline) {
+  background: hsl(var(--v6-ink));
+  border-color: hsl(var(--v6-ink));
+  color: hsl(var(--v6-white));
+  box-shadow: inset 0 1px 0 hsl(var(--v6-white) / 0.12);
+  transition: box-shadow .18s ease-out, transform .18s ease-out, background .18s;
+}
+.v6-site .hero-shell .btn:not(.outline), .v6-site .dark .btn:not(.outline) {
+  background: hsl(var(--v6-laser)); border-color: hsl(var(--v6-laser)); color: hsl(var(--v6-ink));
+}
+.v6-site .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 1px hsl(var(--v6-laser) / 0.5), 0 8px 24px -8px hsl(var(--v6-laser) / 0.55);
+}
+.v6-site .btn.outline { transition: border-color .18s, color .18s; }
+.v6-site .btn.outline:hover { border-color: hsl(var(--v6-laser)); color: hsl(var(--v6-laser)); }
+
+/* Laser circuits */
+.v6-site .hero-trace { color: hsl(var(--v6-laser) / 0.45); filter: drop-shadow(0 0 4px hsl(var(--v6-laser) / 0.5)); }
+.v6-site .hero-v4 h1 span { color: hsl(var(--v6-laser-2)); }
+.v6-site .dot { background: hsl(var(--v6-laser)); box-shadow: 0 0 8px hsl(var(--v6-laser)); }
+
+/* Active tabs & focus */
+.v6-site :is(.tabs, .usebuttons) button.active {
+  box-shadow: inset 0 -2px 0 hsl(var(--v6-laser));
+}
+.v6-site :is(button, a, input, select):focus-visible {
+  outline: 1px solid hsl(var(--v6-laser)); outline-offset: 2px;
+}
+.v6-site .progress i { background: linear-gradient(90deg, hsl(var(--v6-laser)), hsl(var(--v6-laser-2))); box-shadow: 0 0 10px hsl(var(--v6-laser) / 0.6); }
+
+/* Cards on light: top-edge highlight */
+.v6-site .section:not(.dark) :is(.usevisual, .memory, .feature) {
+  background: hsl(var(--v6-white) / 0.7);
+  border: 1px solid hsl(var(--v6-hairline-light));
+  box-shadow: inset 0 1px 0 hsl(var(--v6-white)), 0 20px 50px -30px hsl(var(--v6-ink) / 0.25);
+}
