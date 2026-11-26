@@ -8,6 +8,7 @@ import AppPage from "./pages/App";
 import RequestAccess from "./pages/RequestAccess";
 import NotFound from "./pages/NotFound";
 import V7 from "./pages/V7";
+import V14 from "./pages/V14";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/v7" element={<V7 />} />
+          <Route path="/v14" element={<V14 />} />
           <Route path="/app" element={<AppPage />} />
           <Route path="/request-access" element={<RequestAccess />} />
           <Route path="*" element={<NotFound />} />
